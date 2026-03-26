@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Build Image') {
             steps {
-                sh 'docker build -t devops-compose-app .'
+                sh 'docker build -t devops-frontend ./frontend'
             }
         }
 
-        stage('Run Tests') {
+        stage('Build Frontend') {
             steps {
-                sh 'docker run --rm devops-compose-app npm test'
+                sh 'docker run --rm devops-frontend npm run build'
             }
         }
     }

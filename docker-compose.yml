@@ -1,12 +1,7 @@
 version: '3'
 
 services:
-  app:
-    build: .
+  frontend:
+    build: ./frontend
     ports:
-      - "3000:3000"
-    command: node server.js
-
-  test:
-    build: .
-    command: npm test
+      - "5173:5173"
