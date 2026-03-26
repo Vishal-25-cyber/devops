@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build Image') {
             steps {
-                sh 'docker build -t devops-frontend ./frontend'
+                sh 'docker build -t devops-frontend ./travel_planner'
             }
         }
 
